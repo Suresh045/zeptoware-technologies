@@ -35,19 +35,25 @@ It allows candidates to upload resumes and HR to perform **semantic AI search** 
 
 ## 🗂️ Project Structure
 
-```
-project/
-│── app.py
-│── models.py
-│── utils.py
-│── config.py
-│── requirements.txt
-│── uploads/
-│── templates/
-│── static/
-│── resumes_semantic.db (if using SQLite)
-└── README.md
-```
+resume_semantic_search_full/
+├── app.py
+├── config.py
+├── models.py
+├── utils.py
+├── requirements.txt
+├── README.md
+├── resumes_semantic.db # created after first run (if using SQLite)
+├── uploads/ # uploaded resumes
+├── templates/
+│ ├── base.html
+│ ├── upload.html
+│ ├── hr_search.html
+│ ├── hr_search_semantic.html
+│ ├── embed_all.html
+│ ├── matches.html
+│ └── view_resume.html
+└── static/
+└── style.css
 
 ---
 
