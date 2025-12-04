@@ -33,6 +33,35 @@ It allows candidates to upload resumes and HR to perform **semantic AI search** 
 
 ---
 
+---
+
+## 📸 Project Screenshots
+
+### 🧑‍🎓 Candidate — Upload Resume
+<img src="https://raw.githubusercontent.com/Suresh045/zeptoware-technologies/main/screenshots/upload_page.png" width="800">
+
+---
+
+### 🧑‍💼 HR — Semantic Search (AI Mode)
+<img src="https://raw.githubusercontent.com/Suresh045/zeptoware-technologies/main/screenshots/hr_semantic_search.png" width="800">
+
+---
+
+### 🔍 Semantic Search Results (Ranked by Similarity)
+<img src="https://raw.githubusercontent.com/Suresh045/zeptoware-technologies/main/screenshots/semantic_results.png" width="800">
+
+---
+
+### 📝 Resume Viewer (Extracted Text)
+<img src="https://raw.githubusercontent.com/Suresh045/zeptoware-technologies/main/screenshots/view_resume.png" width="800">
+
+---
+
+### 🧩 Keyword Search (Legacy Mode)
+<img src="https://raw.githubusercontent.com/Suresh045/zeptoware-technologies/main/screenshots/keyword_search.png" width="800">
+
+---
+
 ## 🗂️ Project Structure
 
 ```
