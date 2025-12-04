@@ -35,6 +35,7 @@ It allows candidates to upload resumes and HR to perform **semantic AI search** 
 
 ## 🗂️ Project Structure
 
+```
 resume_semantic_search_full/
 ├── app.py
 ├── config.py
@@ -54,7 +55,7 @@ resume_semantic_search_full/
 │ └── view_resume.html
 └── static/
 └── style.css
-
+```
 ---
 
 # ⚙️ Setup & Installation
