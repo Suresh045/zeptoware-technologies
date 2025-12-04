@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Matches</h2>
+<p>Query: {{ keywords|join(', ') }}</p>
+{% if matches %}
+  <table>
+    <thead>
+      <tr><th>Candidate</th><th>File</th><th>Score</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+      {% for m in matches %}
+      <tr>
+        <td>{{ m.resume.candidate_name or '—' }}<br>{{ m.resume.candidate_email or '' }}</td>
+        <td>{{ m.resume.filename }}</td>
+        <td>{{ '%.4f'|format(m.score) }}</td>
+        <td>
+          <a href="/view/{{ m.resume.id }}">View</a> |
+          <a href="/uploads/{{ m.resume.filename }}">Download</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% else %}
+  <p>No matches found.</p>
+{% endif %}
+{% endblock %}

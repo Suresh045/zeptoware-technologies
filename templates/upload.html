@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .card {
+        width: 60%;
+        margin: 30px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .card h2 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size: 26px;
+        color: #333;
+        font-weight: 600;
+    }
+
+    label {
+        display: block;
+        margin-top: 12px;
+        margin-bottom: 6px;
+        font-size: 15px;
+        font-weight: 500;
+        color: #444;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="file"] {
+        width: 100%;
+        padding: 12px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        font-family: "Segoe UI", sans-serif;
+        transition: 0.3s ease;
+        background: #fafafa;
+    }
+
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+        border-color: #1e88e5;
+        background: #fff;
+        box-shadow: 0 0 5px rgba(30,136,229,0.4);
+        outline: none;
+    }
+
+    .btn-upload {
+        margin-top: 25px;
+        padding: 12px 22px;
+        background: #1e88e5;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        width: 100%;
+    }
+
+    .btn-upload:hover {
+        background: #1565c0;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="card">
+    <h2>📄 Candidate — Upload Resume</h2>
+
+    <form action="/upload" method="post" enctype="multipart/form-data">
+
+        <label>Name (optional):</label>
+        <input type="text" name="name" placeholder="Enter your name">
+
+        <label>Email (optional):</label>
+        <input type="email" name="email" placeholder="Enter your email">
+
+        <label>Upload Resume (PDF or DOCX):</label>
+        <input type="file" name="resume" accept=".pdf,.docx">
+
+        <button type="submit" class="btn-upload">Upload Resume</button>
+    </form>
+</div>
+
+{% endblock %}

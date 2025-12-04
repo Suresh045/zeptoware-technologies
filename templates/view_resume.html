@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .resume-card {
+        width: 70%;
+        margin: 30px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .resume-card h2 {
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 26px;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .info-box {
+        background: #f5f5f5;
+        padding: 12px 15px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        font-size: 14.5px;
+        border-left: 4px solid #1e88e5;
+    }
+
+    .resume-text {
+        background: #fafafa;
+        padding: 18px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        white-space: pre-wrap;
+        font-size: 14px;
+        line-height: 1.5;
+        max-height: 60vh;
+        overflow-y: auto;
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.08);
+    }
+
+    .download-btn {
+        margin-top: 20px;
+        padding: 12px 22px;
+        background: #43a047;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        text-decoration: none;
+        border-radius: 6px;
+        display: inline-block;
+        transition: 0.3s;
+    }
+
+    .download-btn:hover {
+        background: #2e7d32;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        text-decoration: none;
+        color: white;
+    }
+</style>
+
+<div class="resume-card">
+
+    <h2>📄 Resume — {{ resume.filename }}</h2>
+
+    <div class="info-box">
+        <p><strong>Name:</strong> {{ resume.candidate_name or '—' }}</p>
+        <p><strong>Email:</strong> {{ resume.candidate_email or '—' }}</p>
+    </div>
+
+    <div class="resume-text">
+        {{ resume.text_content or 'No extracted text available.' }}
+    </div>
+
+    <a href="/uploads/{{ resume.filename }}" class="download-btn">⬇ Download Original Resume</a>
+
+</div>
+
+{% endblock %}

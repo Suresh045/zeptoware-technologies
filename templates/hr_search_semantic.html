@@ -1,0 +1,82 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .card {
+        width: 70%;
+        margin: 30px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    .card h2 {
+        margin-bottom: 15px;
+        color: #333;
+        text-align: center;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    label {
+        display: block;
+        font-size: 15px;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #444;
+    }
+
+    textarea {
+        width: 100%;
+        border-radius: 8px;
+        padding: 12px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        transition: 0.3s;
+        font-family: "Segoe UI", sans-serif;
+    }
+
+    textarea:focus {
+        border-color: #1e88e5;
+        box-shadow: 0 0 5px rgba(30,136,229,0.5);
+        outline: none;
+    }
+
+    .btn {
+        margin-top: 20px;
+        background: #1e88e5;
+        border: none;
+        padding: 12px 22px;
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn:hover {
+        background: #1565c0;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+</style>
+
+<div class="card">
+    <h2>🔍 HR — Semantic Search</h2>
+    <form action="/search_semantic" method="post">
+
+        <label>Paste the Job Description:</label>
+        <textarea name="job_description" rows="7" 
+                  placeholder="Example:
+We are looking for a Backend Engineer with 3+ years of experience in Python, Django, REST APIs, Microservices, MySQL, and AWS.
+"></textarea>
+
+        <button type="submit" class="btn">Search (Semantic AI)</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 1rem;
+}
+
+header {
+    margin-bottom: 1rem;
+}
+
+nav a {
+    margin-right: 0.5rem;
+    text-decoration: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.flashes {
+    list-style: none;
+    color: green;
+    padding-left: 0;
+}
+
+pre {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 6px;
+}
